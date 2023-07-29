@@ -116,6 +116,8 @@ def smooth_monotonic_activation_constraint(net_block, net, layer_block, layer, f
     def _smooth_monotonic_activation_constraint(b, *output_index):
         zhat_lb, zhat_ub = b.zhat[output_index].bounds
         if zhat_lb is not None:
+            if zhat_lb < -709:
+                zhat_lb = -709
             b.z[output_index].setlb(fcn(zhat_lb))
         if zhat_ub is not None:
             b.z[output_index].setub(fcn(zhat_ub))

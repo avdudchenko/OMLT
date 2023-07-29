@@ -12,7 +12,7 @@ from omlt.neuralnet.layer import (
 )
 from omlt.neuralnet.network_definition import NetworkDefinition
 
-_ACTIVATION_OP_TYPES = ["Relu", "Sigmoid", "LogSoftmax"]
+_ACTIVATION_OP_TYPES = ["Relu", "Sigmoid", "LogSoftmax", "Tanh"]
 _POOLING_OP_TYPES = ["MaxPool"]
 
 
